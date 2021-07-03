@@ -4,7 +4,7 @@
 
 
 
-const phRegEx = /^(0[4,5][0-9]{8})$|^(\+?61[0-9]{9})$/;
+const phRegEx = /^(0[4,5]\d{8})$|^(\+?61\d{9})$/;
 
 
 // console.log(phRegEx.test(phNum1));
@@ -30,12 +30,10 @@ describe('returns true with aus phone number', () => {
 describe('returns false with aus phone number', () => {
   it('is true on +6140750551', () => {
     const phNum = '+6140750551';
-    console.log(phRegEx.test(phNum));
     expect(phRegEx.test(phNum)).toBe(false);
   });
   it('is false on 614075055199', () => {
     const phNum = '614075055199';
-    console.log(phRegEx.test(phNum));
     expect(phRegEx.test(phNum)).toBe(false);
   });
   it('is false on 1407505519', () => {
@@ -44,7 +42,6 @@ describe('returns false with aus phone number', () => {
   });
   it('is false on 0707505519', () => {
     const phNum = '0707505519';
-    console.log(phRegEx.test(phNum));
     expect(phRegEx.test(phNum)).toBe(false);
   });
 })
