@@ -1,6 +1,8 @@
 # Regular Expressions Explained
 
-A Regular expression, commonly referred to as a RegEx or RegExp, is a collection of letters, numbers and symbols which represents a search pattern. These search patterns are most commonly used in search algorithms and string operations. They become particularly helpful when validating and sanitizing data.
+## Summary
+
+A Regular expression, commonly referred to as a RegEx or RegExp, is a collection of letters, numbers and symbols which represents a search pattern. These search patterns are most commonly used in search algorithms as a part of string operations. They become particularly helpful when validating and sanitizing data.
 
 ## Example
 
