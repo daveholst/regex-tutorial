@@ -4,7 +4,7 @@
 
 
 
-const phRegEx = /^(0[4,5]\d{8})$|^(\+?61\d{9})$/;
+const phRegEx = /^0[4,5]\d{8}$|^\+?61\d{9}$/;
 
 
 // console.log(phRegEx.test(phNum1));

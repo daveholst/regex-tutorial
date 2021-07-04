@@ -7,7 +7,7 @@ A Regular expression, commonly referred to as a regex, is a collection of letter
 I will be building a regex that checks wether an Australian mobile number is valid or not. It will consider both the traditional `0404` and new `0405` variants that are becoming available. The regular expression will also work if the phone number has been entered with a `+61` or `61` in place of the first `0`.
 
 ```
-/^(0[4,5]\d{8})$|^(\+?61\d{9})$/gm
+/^0[4,5]\d{8}$|^\+?61\d{9}$/gm
 ```
 
 ## Table of Contents
@@ -44,6 +44,8 @@ Both `\d{8}` and `\d{9}` are both examples of Quantifiers. The `\d` is a charact
 `*` means zero or more. Equivalent to `{0,}`
 
 ### Grouping Constructs
+
+A capturing group allows a pattern
 
 ### Bracket Expressions
 
