@@ -105,6 +105,6 @@ This article is written by me, Dave Holst, a Full Stack JavaScript Developer.
 
 - My GitHub: https://github.com/daveholst
 - My portfolio: https://daveholst.dev
-- Get in Contact: contact@daveholst.dev
+- Email: contact@daveholst.dev
 
 GitHub Repo with tests: https://github.com/daveholst/regex-tutorial
