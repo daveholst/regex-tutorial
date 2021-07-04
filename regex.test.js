@@ -4,7 +4,7 @@
 
 
 
-const phRegEx = /^0[45]\d{8}$|^\+?61\d{9}$/;
+const phRegEx = /^0[4,5]\d{8}$|^\+?61\d{9}$/;
 
 
 // console.log(phRegEx.test(phNum1));
@@ -24,6 +24,10 @@ describe('returns true with aus phone number', () => {
   });
   it('is true on 0407505519', () => {
     const phNum = '0407505519';
+    expect(phRegEx.test(phNum)).toBe(true);
+  });
+  it('is true on 057505519', () => {
+    const phNum = '0507505519';
     expect(phRegEx.test(phNum)).toBe(true);
   });
 })
