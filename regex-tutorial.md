@@ -35,9 +35,9 @@ Quantifies specified the desired quantity of a given character or characters. It
 
 Both `\d{8}` and `\d{9}` are both examples of Quantifiers. The `\d` is a character class that represents all digits. When we see `\d{8}` we are looking for a pattern that has 8 digits in a row to match. The quantifier can also take two parameters to represent a range. For example `\d{6,8}` would be look for a 6-8 digits. Parameters can be omitted to represent a less than or greater than. For example `\d{6,}` would look for a pattern with 6 or more digits.
 
-`?` is also an example of shorthand quantifier. It has been used in out RegEx in the form of `\+?`. The `\+` represent an escaped character, which means that we are looking for a literal character of `+`. The `?` means that we are looking for 0 or 1. It is the equivalent of `{0,1}`
+`?` is also an example of shorthand quantifier. It has been used in out RegEx in the form of `\+?`. The `\+` represent an escaped character, which means that we are looking for a literal character of `+`. The `?` means that we are looking for 0 or 1. It is the equivalent of `{0,1}`.\
 
-#### Shorthands
+Here is a list of some common shorthands:\
 
 - `+` means more than one. Equivalent to `x{1,}`
 - `?` means zero or one. Equivalent to `x{0,1}`
@@ -60,6 +60,24 @@ It is also possible to specify ranges with bracket expressions. For example if w
 
 ### Character Classes
 
+Character classes are a shorthand way to represent a group of characters. We are using this in our Australian phone number regex with the `/d`. Character classes always start with a single backslash `\` which escapes the literal meaning of that character.\
+\
+Some common examples are: \
+
+- `\s`: single whitespace character
+- `\S`: single character that is NOT white space
+- `\u`: single uppercase character `[A-Z]`
+- `\U`: single character that is not uppercase `[^A-Z]`
+- `\w`: word character `[a-zA-Z0-9_]`
+- `\W`: single character that is NOT a word character `[^a-zA-Z0-9_]`
+- `\x00-\xFF`: hexadecimal character
+- `\cX`: ASCII control character
+- `\d`: single digit `[0-9]`
+- `\D`: single character that is NOT a digit `[^0-9]`
+- `\E`: stop processing escaped characters
+- `\l`: match a single lowercase letter `[a-z]`
+- `\L`: single character that is not lowercase `[^a-z]`
+
 ### The OR Operator
 
 The `OR` operator works the same was it does as a logical operator inside JavaScript. It enables as to match a collection of text against two different test patterns, if either returns true it becomes a match. In RegEx OR is represented by a single `|`.
@@ -68,9 +86,10 @@ We have used the `OR` or `|` operator to check against two separate patterns. Th
 
 ### Flags
 
-Flags dictate how the pattern is applied to the string it being compared against. They occur at the end of the RegEx and in out example we are using `/gm`. This was mainly for testing purposes that will make sense once we understand what each flag does./
+Flags dictate how the pattern is applied to the string it being compared against. They occur at the end of the RegEx and in out example we are using `/gm`. This was mainly for testing purposes that will make sense once we understand what each flag does.\
 
-The main regular expression flags this will see are:
+The main regular expression flags this will see are:\
+\
 
 - `/i` Case Insensitive: this means that when the pattern is running it sees no difference between an `a` and an `A`
 - `/g` Global: this means that the RegExp will return **all** matches, not just the first.
@@ -79,6 +98,11 @@ The main regular expression flags this will see are:
 
 ### Character Escapes
 
+Character escapes are required when you need to sort for a character literally, a `[` for example. Characters can be escaped by prefixing with a `\`. In our regex we have had to escape the `+` symbol because we are literally looking for a `+` in the string, we do this buy using `\+` instead. If we did not escape this character the interpreter would get confused as an unescaped `+` is a quantifier for one or more.
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+This article is written by me, Dave Holst, a Full Stack JavaScript Developer.
+My GitHub: https://github.com/daveholst
+My portfolio: https://daveholst.dev
+Get in Contact: contact@daveholst.dev
